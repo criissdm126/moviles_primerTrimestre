@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Número de teléfono al que se realizará la llamada
-                String phoneNumber = "123456789";  // Reemplaza con el número deseado
+                String phoneNumber = "123456789";
 
                 // Crear un intent con ACTION_DIAL
                 Intent intent = new Intent(Intent.ACTION_DIAL);
