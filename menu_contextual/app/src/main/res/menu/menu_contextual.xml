@@ -3,8 +3,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-    <item android:id="@+id/Cataluña" android:title="Cataluña"/>
-    <item android:id="@+id/Madrid" android:title="Madrid"/>
-    <item android:id="@+id/Aragón" android:title="Aragón"/>
+    <item
+        android:id="@+id/Cataluña"
+        android:title="Cataluña">
+        <menu>
+            <item
+                android:id="@+id/Barcelona"
+                android:title="Barcelona" />
+            <item
+                android:id="@+id/Girona"
+                android:title="Girona" />
+            <item
+                android:id="@+id/Lleida"
+                android:title="Lleida" />
+            <item
+                android:id="@+id/Tarragona"
+                android:title="Tarragona" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/Madrid"
+        android:title="Madrid">
+        <menu>
+            <item
+                android:id="@+id/Comunidad_Madrid"
+                android:title="Madrid" />
+        </menu>
+    </item>
+
+
+    <item
+        android:id="@+id/Aragón"
+        android:title="Aragón">
+        <menu>
+            <item
+                android:id="@+id/Huesca"
+                android:title="Huesca" />
+            <item
+                android:id="@+id/Teruel"
+                android:title="Teruel" />
+            <item
+                android:id="@+id/Zaragoza"
+                android:title="Zaragoza" />
+        </menu>
+    </item>
 
 </menu>
