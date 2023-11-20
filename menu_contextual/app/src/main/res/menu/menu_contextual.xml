@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
+    <!-- Menú contextual para Cataluña -->
     <item
-        android:id="@+id/Cataluña"
+        android:id="@+id/Cataluna"
         android:title="Cataluña">
         <menu>
+            <!-- Submenú para Barcelona -->
             <item
                 android:id="@+id/Barcelona"
                 android:title="Barcelona">
@@ -23,6 +25,7 @@
                         android:title="Olivella"/>
                 </menu>
             </item>
+            <!-- Submenú para Girona -->
             <item
                 android:id="@+id/Girona"
                 android:title="Girona">
@@ -38,12 +41,13 @@
                         android:title="Castellfollit de la Roca" />
                 </menu>
             </item>
+            <!-- Submenú para Lleida -->
             <item
                 android:id="@+id/Lleida"
                 android:title="Lleida">
                 <menu>
                     <item
-                        android:id="@+id/Taüll_Lleida"
+                        android:id="@+id/Taull_Lleida"
                         android:title="Taüll" />
                     <item
                         android:id="@+id/Guimera_Lleida"
@@ -53,6 +57,7 @@
                         android:title="Vielha" />
                 </menu>
             </item>
+            <!-- Submenú para Tarragona -->
             <item
                 android:id="@+id/Tarragona"
                 android:title="Tarragona">
@@ -71,10 +76,12 @@
         </menu>
     </item>
 
+    <!-- Menú contextual para Madrid -->
     <item
         android:id="@+id/Madrid"
         android:title="Madrid">
         <menu>
+            <!-- Submenú para Comunidad Madrid -->
             <item
                 android:id="@+id/Comunidad_Madrid"
                 android:title="Madrid">
@@ -93,10 +100,12 @@
         </menu>
     </item>
 
+    <!-- Menú contextual para Aragón -->
     <item
         android:id="@+id/Aragon"
         android:title="Aragón">
         <menu>
+            <!-- Submenú para Huesca -->
             <item
                 android:id="@+id/Huesca"
                 android:title="Huesca">
@@ -112,6 +121,7 @@
                         android:title="Ansó" />
                 </menu>
             </item>
+            <!-- Submenú para Teruel -->
             <item
                 android:id="@+id/Teruel"
                 android:title="Teruel">
@@ -127,6 +137,7 @@
                         android:title="Calaceite" />
                 </menu>
             </item>
+            <!-- Submenú para Zaragoza -->
             <item
                 android:id="@+id/Zaragoza"
                 android:title="Zaragoza">
@@ -146,3 +157,4 @@
     </item>
 
 </menu>
+

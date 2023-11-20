@@ -60,8 +60,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
     private void mostrarPoblaciones(String provincia) {
         // Aquí puedes personalizar el mensaje con las poblaciones de la provincia
         String mensaje = "Poblaciones de " + provincia + ": Población1, Población2, Población3";
