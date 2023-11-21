@@ -19,13 +19,12 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnShowMenu = findViewById(R.id.btnShowMenu);
 
-        // Registra el botón para el menú contextual
+
         registerForContextMenu(btnShowMenu);
 
         btnShowMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Abre el menú contextual al hacer clic en el botón
                 openContextMenu(view);
             }
         });
@@ -40,19 +39,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         int itemId = item.getItemId();
 
-        if (itemId == R.id.Barcelona ||
-                itemId == R.id.Girona ||
-                itemId == R.id.Lleida ||
-                itemId == R.id.Tarragona ||
-                itemId == R.id.Comunidad_Madrid ||
-                itemId == R.id.Huesca ||
-                itemId == R.id.Teruel ||
-                itemId == R.id.Zaragoza) {
+        int groupId = item.getGroupId();
 
+        if (groupId == R.id.groupCataluna || groupId == R.id.groupMadrid || groupId == R.id.groupAragon) {
             mostrarPoblaciones(item.getTitle().toString());
             return true;
         } else {
@@ -60,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     private void mostrarPoblaciones(String provincia) {
-        // Aquí puedes personalizar el mensaje con las poblaciones de la provincia
         String mensaje = "Poblaciones de " + provincia + ": Población1, Población2, Población3";
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
     }

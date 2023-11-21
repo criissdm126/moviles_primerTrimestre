@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
+    <group android:id="@+id/groupCataluna">
     <!-- Menú contextual para Cataluña -->
     <item
         android:id="@+id/Cataluna"
@@ -75,11 +76,13 @@
             </item>
         </menu>
     </item>
+    </group>
 
+    <group android:id="@+id/groupMadrid">
     <!-- Menú contextual para Madrid -->
     <item
         android:id="@+id/Madrid"
-        android:title="Madrid">
+        android:title="Comunidad de Madrid">
         <menu>
             <!-- Submenú para Comunidad Madrid -->
             <item
@@ -99,7 +102,9 @@
             </item>
         </menu>
     </item>
+</group>
 
+    <group android:id="@+id/groupAragon">
     <!-- Menú contextual para Aragón -->
     <item
         android:id="@+id/Aragon"
@@ -155,6 +160,6 @@
             </item>
         </menu>
     </item>
-
+    </group>
 </menu>
 
