@@ -4,157 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-    <group android:id="@+id/groupCataluna">
-    <!-- Menú contextual para Cataluña -->
-    <item
-        android:id="@+id/Cataluna"
+    <item android:id="@+id/groupCataluna"
         android:title="Cataluña">
         <menu>
-            <!-- Submenú para Barcelona -->
-            <item
-                android:id="@+id/Barcelona"
-                android:title="Barcelona">
-                <menu>
-                    <item
-                        android:id="@+id/Castellet_Barcelona"
-                        android:title="Castellet i la Gornal"/>
-                    <item
-                        android:id="@+id/Baga_Barcelona"
-                        android:title="Bagà"/>
-                    <item
-                        android:id="@+id/Olivella_Barcelona"
-                        android:title="Olivella"/>
-                </menu>
-            </item>
-            <!-- Submenú para Girona -->
-            <item
-                android:id="@+id/Girona"
-                android:title="Girona">
-                <menu>
-                    <item
-                        android:id="@+id/Cadaques_Girona"
-                        android:title="Cadaqués" />
-                    <item
-                        android:id="@+id/Calella_Girona"
-                        android:title="Calella de Palafrugell" />
-                    <item
-                        android:id="@+id/Castellfollit_Girona"
-                        android:title="Castellfollit de la Roca" />
-                </menu>
-            </item>
-            <!-- Submenú para Lleida -->
-            <item
-                android:id="@+id/Lleida"
-                android:title="Lleida">
-                <menu>
-                    <item
-                        android:id="@+id/Taull_Lleida"
-                        android:title="Taüll" />
-                    <item
-                        android:id="@+id/Guimera_Lleida"
-                        android:title="Guimerà" />
-                    <item
-                        android:id="@+id/Vielha_Lleida"
-                        android:title="Vielha" />
-                </menu>
-            </item>
-            <!-- Submenú para Tarragona -->
-            <item
-                android:id="@+id/Tarragona"
-                android:title="Tarragona">
-                <menu>
-                    <item
-                        android:id="@+id/Montblanc_Tarragona"
-                        android:title="Montblanc" />
-                    <item
-                        android:id="@+id/Altafulla_Tarragona"
-                        android:title="Altafulla" />
-                    <item
-                        android:id="@+id/Tortosa_Tarragona"
-                        android:title="Tortosa" />
-                </menu>
-            </item>
+            <item android:id="@+id/Barcelona"
+                android:title="Barcelona" />
+            <item android:id="@+id/Girona"
+                android:title="Girona"/>
+            <item android:id="@+id/Lleida"
+                android:title="Lleida" />
+            <item android:id="@+id/Tarragona"
+                android:title="Tarragona" />
         </menu>
     </item>
-    </group>
 
-    <group android:id="@+id/groupMadrid">
     <!-- Menú contextual para Madrid -->
-    <item
-        android:id="@+id/Madrid"
-        android:title="Comunidad de Madrid">
-        <menu>
-            <!-- Submenú para Comunidad Madrid -->
+    <item android:id="@+id/Madrid"
+        android:title="Madrid" />
 
-                    <item
-                        android:id="@+id/Buitrago_Madrid"
-                        android:title="Buitrago de Lozoya" />
-                    <item
-                        android:id="@+id/Patones_Madrid"
-                        android:title="Patones de Arriba" />
-                    <item
-                        android:id="@+id/Escorial_Madrid"
-                        android:title="San Lorenzo de El Escorial" />
-                </menu>
-            </item>
-</group>
 
-    <group android:id="@+id/groupAragon">
+
     <!-- Menú contextual para Aragón -->
     <item
         android:id="@+id/Aragon"
         android:title="Aragón">
         <menu>
-            <!-- Submenú para Huesca -->
             <item
                 android:id="@+id/Huesca"
-                android:title="Huesca">
-                <menu>
-                    <item
-                        android:id="@+id/Ainsa_Huesca"
-                        android:title="Aínsa" />
-                    <item
-                        android:id="@+id/Alquezar_Huesca"
-                        android:title="Alquézar" />
-                    <item
-                        android:id="@+id/Anso_Huesca"
-                        android:title="Ansó" />
-                </menu>
-            </item>
-            <!-- Submenú para Teruel -->
+                android:title="Huesca" />
             <item
                 android:id="@+id/Teruel"
-                android:title="Teruel">
-                <menu>
-                    <item
-                        android:id="@+id/Albarracin_Teruel"
-                        android:title="Albarracín" />
-                    <item
-                        android:id="@+id/Valderrobres_Teruel"
-                        android:title="Valderrobres" />
-                    <item
-                        android:id="@+id/Calaceite_Teruel"
-                        android:title="Calaceite" />
-                </menu>
-            </item>
-            <!-- Submenú para Zaragoza -->
+                android:title="Teruel"/>
             <item
                 android:id="@+id/Zaragoza"
-                android:title="Zaragoza">
-                <menu>
-                    <item
-                        android:id="@+id/Sos_Zaragoza"
-                        android:title="Sos del Rey Católico" />
-                    <item
-                        android:id="@+id/Uncastillo_Zaragoza"
-                        android:title="Uncastillo" />
-                    <item
-                        android:id="@+id/Anento_Zaragoza"
-                        android:title="Anento" />
-                </menu>
-            </item>
+                android:title="Zaragoza" />
         </menu>
     </item>
-    </group>
 </menu>
-
