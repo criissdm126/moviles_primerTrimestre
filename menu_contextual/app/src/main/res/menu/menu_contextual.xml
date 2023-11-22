@@ -85,10 +85,7 @@
         android:title="Comunidad de Madrid">
         <menu>
             <!-- Submenú para Comunidad Madrid -->
-            <item
-                android:id="@+id/Comunidad_Madrid"
-                android:title="Madrid">
-                <menu>
+
                     <item
                         android:id="@+id/Buitrago_Madrid"
                         android:title="Buitrago de Lozoya" />
@@ -100,8 +97,6 @@
                         android:title="San Lorenzo de El Escorial" />
                 </menu>
             </item>
-        </menu>
-    </item>
 </group>
 
     <group android:id="@+id/groupAragon">

@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         int groupId = item.getGroupId();
 
-        if (groupId == R.id.groupCataluna || groupId == R.id.groupMadrid || groupId == R.id.groupAragon) {
+        if (groupId == R.id.groupCataluna || groupId == R.id.groupAragon) {
             mostrarPoblaciones(item.getTitle().toString());
             return true;
         } else {
