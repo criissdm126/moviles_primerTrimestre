@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        // Manejar las selecciones de elementos del menú aquí
-
         if (id == R.id.Barcelona) {
             showToast("Castellet i la Gornal, Bagà, Olivella");
             return true;
