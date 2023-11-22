@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu mimenu){
         getMenuInflater().inflate(R.menu.menu, mimenu);
+
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem opcion_menu){
         int id = opcion_menu.getItemId();

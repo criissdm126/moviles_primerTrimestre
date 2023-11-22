@@ -2,6 +2,7 @@ package com.example.menu_contextual;
 
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,35 +15,22 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button btnShowMenu = findViewById(R.id.btnShowMenu);
-
-
-        registerForContextMenu(btnShowMenu);
-
-        btnShowMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openContextMenu(view);
-            }
-        });
     }
 
     @Override
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        super.onCreateContextMenu(menu, v, menuInfo);
+    public boolean onCreateOptionsMenu(Menu mimenu){
+        getMenuInflater().inflate(R.menu.menu_contextual, mimenu);
 
-        if (v.getId() == R.id.btnShowMenu) {
-            getMenuInflater().inflate(R.menu.menu_contextual, menu);
-        }
+        return true;
     }
 
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        int itemId = item.getItemId();
+        // int itemId = item.getItemId();
 
         int groupId = item.getGroupId();
 
