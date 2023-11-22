@@ -1,28 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-    <item android:id="@+id/groupCataluna"
+    <item
+        android:id="@+id/groupCataluna"
         android:title="Cataluña">
         <menu>
-            <item android:id="@+id/Barcelona"
-                android:title="Barcelona" />
-            <item android:id="@+id/Girona"
-                android:title="Girona"/>
-            <item android:id="@+id/Lleida"
-                android:title="Lleida" />
-            <item android:id="@+id/Tarragona"
-                android:title="Tarragona" />
+            <item
+                android:id="@+id/Barcelona"
+                android:title="Barcelona"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/Girona"
+                android:title="Girona"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/Lleida"
+                android:title="Lleida"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/Tarragona"
+                android:title="Tarragona"
+                app:showAsAction="never" />
         </menu>
     </item>
 
     <!-- Menú contextual para Madrid -->
-    <item android:id="@+id/Madrid"
-        android:title="Madrid" />
-
-
+    <item
+        android:id="@+id/Madrid"
+        android:title="Madrid"
+        app:showAsAction="never" />
 
     <!-- Menú contextual para Aragón -->
     <item
@@ -31,13 +39,16 @@
         <menu>
             <item
                 android:id="@+id/Huesca"
-                android:title="Huesca" />
+                android:title="Huesca"
+                app:showAsAction="never" />
             <item
                 android:id="@+id/Teruel"
-                android:title="Teruel"/>
+                android:title="Teruel"
+                app:showAsAction="never" />
             <item
                 android:id="@+id/Zaragoza"
-                android:title="Zaragoza" />
+                android:title="Zaragoza"
+                app:showAsAction="never" />
         </menu>
     </item>
 </menu>
