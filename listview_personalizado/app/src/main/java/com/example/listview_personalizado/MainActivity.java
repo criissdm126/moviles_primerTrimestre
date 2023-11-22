@@ -27,9 +27,13 @@ public class MainActivity extends AppCompatActivity {
         ejemplolist.add(new Ejemplo("Título Ejemplo 2", "Subtitulo Ejemplo 2", "", 2));
         ejemplolist.add(new Ejemplo("Título Ejemplo 3", "Subtitulo Ejemplo 3", "", 3));
         ejemplolist.add(new Ejemplo("Título Ejemplo 4", "Subtitulo Ejemplo 4", "", 4));
+
+        MiAdaptadorEjemplo adaptadorEjemplo = new MiAdaptadorEjemplo(this, R.layout.ejemplo_item, ejemplolist);
+
+        lista.setAdapter(adaptadorEjemplo);
     }
 
-    MiAdaptadorEjemplo adaptadorEjemplo = new MiAdaptadorEjemplo(this, R.layout.ejemplo_item, ejemplolist);
+
 
 
 }

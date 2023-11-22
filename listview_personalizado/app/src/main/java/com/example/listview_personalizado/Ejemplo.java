@@ -5,12 +5,12 @@ public class Ejemplo {
     private String titulo;
     private String subtitulo;
     private String urlFoto;
-    private int numeroEjemplo;
+    private Integer numeroEjemplo;
 
     public Ejemplo(){
 
     }
-    public Ejemplo(String titulo, String subtitulo, String urlFoto,int numeroEjemplo) {
+    public Ejemplo(String titulo, String subtitulo, String urlFoto, Integer numeroEjemplo) {
         this.titulo = titulo;
         this.subtitulo = subtitulo;
         this.urlFoto = urlFoto;
@@ -46,7 +46,7 @@ public class Ejemplo {
         this.urlFoto = urlFoto;
     }
 
-    public void setNumeroEjemplo(int numeroEjemplo) {
+    public void setNumeroEjemplo(Integer numeroEjemplo) {
         this.numeroEjemplo = numeroEjemplo;
     }
 }
