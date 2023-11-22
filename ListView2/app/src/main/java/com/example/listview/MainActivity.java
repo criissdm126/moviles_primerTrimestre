@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         );
 
         lista.setAdapter(adaptadorEjemplo);
-        
+
         // EVENTO CLICK SOBRE CADA ELEMENTO DE LA LISTA
         lista.setOnItemClickListener(this);
     }
