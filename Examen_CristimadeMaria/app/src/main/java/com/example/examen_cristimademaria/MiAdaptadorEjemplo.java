@@ -1,4 +1,5 @@
-package com.example.examen_cristimademaria;
+/*
+package es.ciudadescolar.josejulliansaavedra_examen;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,17 +9,16 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 import java.util.List;
 
+public class MiAdaptador extends ArrayAdapter<Lista> {
 
-public class MiAdaptadorEjemplo extends ArrayAdapter<Ejemplo> {
     Context ctx;
     int layoutTemplate;
+    List<Lista> ejemploList;
 
-    List<Ejemplo> ejemploList;
-    public MiAdaptadorEjemplo(@NonNull Context context, int resource, @NonNull List<Ejemplo> objects) {
+    public MiAdapatador(@NonNull Context context, int resource, @NonNull List<Lista> objects) {
         super(context, resource, objects);
 
         this.ctx = context;
@@ -29,25 +29,20 @@ public class MiAdaptadorEjemplo extends ArrayAdapter<Ejemplo> {
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent){
-        View v = LayoutInflater.from(ctx).inflate(layoutTemplate,parent, false);
+    public View getView(int position, @NonNull View convertView, @NonNull ViewGroup parent){
 
-        // OBTENER LA INFORMACIÓN DEL ELEMENTO DE LA LISTA QUE ESTAMOS RECORRIENDO EN ESTE MOMENTO.
-        Ejemplo elemntoActual = ejemploList.get(position);
+        View v = LayoutInflater.from(ctx).inflate(layoutTemplate, parent, false);
 
-        // RESCATAR LOS ELEMENTOS DE LA INTERFAZ DE USUARIO DE LA TEMPLATE (PLANTILLA)
-        TextView textViewTitulo = (TextView) v.findViewById(R.id.textViewTitulo);
-        TextView textViewSubtitulo = (TextView) v.findViewById(R.id.textViewSubtitulo);
+        Lista elementoActual = ejemploList.get(position);
+
+
+        TextView textViewNombre = (TextView) v.findViewById(R.id.textViewNombre);
         TextView textViewNumero = (TextView) v.findViewById(R.id.textViewNumero);
 
-        // HACER UN SET DE LA INFO. DEL elementoActual en los elementos de la interfaz del usuario.
-        textViewTitulo.setText(elemntoActual.getTitulo());
-        textViewSubtitulo.setText(elemntoActual.getSubtitulo());
-        textViewNumero.setText(elemntoActual.getNumeroEjemplo() + "");
+        textViewNombre.setText(elementoActual.getNombre());
+        textViewNumero.setText(elementoActual.getNumeroAleatorio());
 
         return v;
     }
 
-    // MiAdaptadorEjemplo adaptadorEjemplo = new MiAdaptadorEjemplo(this, R.layout.ejemplo_item, ejemplolist);
 }
-

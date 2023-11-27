@@ -1,72 +1,57 @@
 package com.example.examen_cristimademaria;
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.AlarmClock;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
-        // Configurar el botón para la opción de Cálculo de Nota
-        Button calculateButton = findViewById(R.id.calculateButton);
-        calculateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent(MainActivity.this, Calculadora.class));
-                startActivity(new Intent(MainActivity.this, Alarma.class));
-                startActivity(new Intent(MainActivity.this, Menu.class));
-                startActivity(new Intent(MainActivity.this, AcercaDe.class));
-            }
-        });
-
-        // Configurar el botón para la opción de Alarma
-        Button alarmButton = findViewById(R.id.alarmButton);
-        alarmButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Alarma.class));
-            }
-        });
-
-        // Configurar el botón para la opción de Menú
-        Button menuButton = findViewById(R.id.menuButton);
-        menuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Menu.class));
-            }
-        });
-
-
-        Button aboutButton = findViewById(R.id.aboutButton);
-        aboutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mostrarDialogoAcercaDe();
-            }
-        });
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
 
-    private void mostrarDialogoAcercaDe() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setTitle("Acerca de")
-                .setMessage("Esta es la APP de (nombre completo del alumno)")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        // Puedes agregar lógica adicional al hacer clic en OK si es necesario
-                    }
-                })
-                .show();
+    public boolean onCreateOptionsMenu(Menu mimenu){
+        getMenuInflater().inflate(R.menu.context_menu,mimenu);
+        return true;
     }
+
+    public boolean onOptionsItemSelected(MenuItem examen){
+        int id=examen.getItemId();
+        if (id==R.id.info) {
+            Toast.makeText(this, "Esta es la APP de Cristina de MARÍA"
+                    , Toast.LENGTH_LONG).show();
+        }
+        return true;
+    }
+
+    public void activarAlarma(){
+        Intent intent =  new Intent(AlarmClock.ACTION_SET_ALARM)
+                .putExtra(AlarmClock.EXTRA_MESSAGE, "Prueba Primera Evaluación")
+                .putExtra(AlarmClock.EXTRA_HOUR, 12)
+                .putExtra(AlarmClock.EXTRA_MINUTES, 30);
+        startActivity(intent);
+    }
+
+    public void iniciarMenu(View view){
+        Intent intent = new Intent(MainActivity.this, MainActivityListView.class);
+        startActivity(intent);
+    }
+
+    public void iniciarCalculo(View view){
+        Intent intent = new Intent(MainActivity.this, Calculadora.class);
+        startActivity(intent);
+    }
+
 }

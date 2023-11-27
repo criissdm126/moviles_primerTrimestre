@@ -1,87 +1,48 @@
 package com.example.examen_cristimademaria;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Calculadora extends AppCompatActivity {
 
-    private EditText numero1, numero2;
-    private TextView resultado;
-    private CheckBox redondearCheckbox;
-    private RadioGroup showOptionRadioGroup;
-    private RadioButton practicasRadioButton, conExamenRadioButton;
-    private Button calcularNotaButton, borrarDatosButton;
+    private EditText num1EditText;
+    private EditText num2EditText;
+    private EditText num3EditText;
+    private TextView resultadoTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculadora);
 
-        numero1 = findViewById(R.id.tvnum1);
-        numero2 = findViewById(R.id.tvnum2);
-        resultado = findViewById(R.id.result);
-        redondearCheckbox = findViewById(R.id.redondearCheckbox);
-        showOptionRadioGroup = findViewById(R.id.showOptionRadioGroup);
-        practicasRadioButton = findViewById(R.id.practicasRadioButton);
-        conExamenRadioButton = findViewById(R.id.conExamenRadioButton);
-        calcularNotaButton = findViewById(R.id.calcularNotaButton);
-        borrarDatosButton = findViewById(R.id.borrarDatosButton);
 
-
-        calcularNotaButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                calcularNota();
-            }
-        });
-
-        // Listener para el botón de borrar datos
-        borrarDatosButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                borrarDatos();
-            }
-        });
+        num1EditText = findViewById(R.id.txtNumero1);
+        num2EditText = findViewById(R.id.txtNumero2);
+        num3EditText = findViewById(R.id.txtNumero3);
+        resultadoTextView = findViewById(R.id.txtResultado);
     }
 
-    public void calcularNota() {
-        try {
-            double num1 = Double.parseDouble(numero1.getText().toString());
-            double num2 = Double.parseDouble(numero2.getText().toString());
-            double notaMedia;
-
-            if (practicasRadioButton.isChecked()) {
-                notaMedia = (num1 + num2) / 2;
-            } else if (conExamenRadioButton.isChecked()) {
-                double notaExamen = 0;
-                notaMedia = (num1 + num2 + notaExamen) / 3;
-            } else {
-                notaMedia = 0;
-            }
+    public void calcular(View view) {
+        double num1 = Double.parseDouble(num1EditText.getText().toString());
+        double num2 = Double.parseDouble(num2EditText.getText().toString());
+        double num3 = Double.parseDouble(num3EditText.getText().toString());
 
 
-            if (redondearCheckbox.isChecked()) {
-                resultado.setText(String.valueOf(Math.round(notaMedia)));
-            } else {
-                resultado.setText(String.valueOf(notaMedia));
-            }
-        } catch (NumberFormatException e) {
-            resultado.setText("Números incorrectos");
-        }
+        double resultado = (num1 + num2 + num3) / 3;
+        long numeroRedondeado = Math.round(resultado);
+        resultadoTextView.setText(String.valueOf(numeroRedondeado));
     }
 
-    public void borrarDatos() {
-        numero1.setText("");
-        numero2.setText("");
-        resultado.setText("");
+    public void borrar(View view) {
+        num1EditText.setText("");
+        num2EditText.setText("");
+        num3EditText.setText("");
+        resultadoTextView.setText("");
     }
 
 }

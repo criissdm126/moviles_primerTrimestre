@@ -15,10 +15,10 @@
         android:theme="@style/Theme.IntentImplicitas"
         tools:targetApi="31">
         <activity
-            android:name=".AcercaDe"
+            android:name=".Lista"
             android:exported="false" />
         <activity
-            android:name=".Menu"
+            android:name=".MainActivityListView"
             android:exported="false" />
         <activity
             android:name=".Alarma"
