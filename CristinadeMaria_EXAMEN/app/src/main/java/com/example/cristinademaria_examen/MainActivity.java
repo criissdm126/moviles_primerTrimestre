@@ -1,12 +1,15 @@
 package com.example.cristinademaria_examen;
-
-import android.os.Bundle;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.appcompat.widget.Toolbar;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.provider.AlarmClock;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,10 +18,40 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
+
+    public boolean onCreateOptionsMenu(Menu mimenu){
+        getMenuInflater().inflate(R.menu.context_menu,mimenu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem examen){
+        int id=examen.getItemId();
+        if (id==R.id.info) {
+            Toast.makeText(this, "Esta es la APP de Cristina de MARÍA"
+                    , Toast.LENGTH_LONG).show();
+        }
+        return true;
+    }
+
+    public void activarAlarma(){
+        Intent intent =  new Intent(AlarmClock.ACTION_SET_ALARM)
+                .putExtra(AlarmClock.EXTRA_MESSAGE, "Prueba Primera Evaluación")
+                .putExtra(AlarmClock.EXTRA_HOUR, 12)
+                .putExtra(AlarmClock.EXTRA_MINUTES, 30);
+        startActivity(intent);
+    }
+
+    public void iniciarMenu(View view){
+        Intent intent = new Intent(MainActivity.this, MainActivityListView.class);
+        startActivity(intent);
+    }
+
+    public void iniciarCalculo(View view){
+        Intent intent = new Intent(MainActivity.this, Calculadora.class);
+        startActivity(intent);
+    }
+
 }
