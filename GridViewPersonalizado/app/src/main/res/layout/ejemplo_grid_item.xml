@@ -3,50 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/subtituloEjemplo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Subtitulo"
+        app:layout_constraintEnd_toEndOf="@+id/imagenEjemplo"
+        app:layout_constraintStart_toStartOf="@+id/imagenEjemplo"
+        app:layout_constraintTop_toBottomOf="@+id/tituloEjemplo" />
+
+    <TextView
+        android:id="@+id/tituloEjemplo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Titulo"
+        app:layout_constraintEnd_toEndOf="@+id/imagenEjemplo"
+        app:layout_constraintStart_toStartOf="@+id/imagenEjemplo"
+        app:layout_constraintTop_toBottomOf="@+id/imagenEjemplo" />
+
+    <TextView
+        android:id="@+id/numeroEjemplo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Numero"
+        app:layout_constraintEnd_toEndOf="@+id/imagenEjemplo"
+        app:layout_constraintStart_toStartOf="@+id/imagenEjemplo"
+        app:layout_constraintTop_toBottomOf="@+id/subtituloEjemplo" />
 
     <ImageView
-        android:id="@+id/imageViewFoto"
+        android:id="@+id/imagenEjemplo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.126"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
-
-    <TextView
-        android:id="@+id/textViewTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ejemplo Titulo"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen" />
-
-    <TextView
-        android:id="@+id/textViewSubtitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ejemplo subtitulo"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewTitulo" />
-
-    <TextView
-        android:id="@+id/textViewNumero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Numero Ejemplo"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="textViewSubtitulo" />
+        app:layout_constraintVertical_bias="0.118"
+        app:srcCompat="@android:mipmap/sym_def_app_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

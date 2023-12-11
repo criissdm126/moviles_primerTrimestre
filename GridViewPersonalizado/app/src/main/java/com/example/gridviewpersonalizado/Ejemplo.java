@@ -2,22 +2,21 @@ package com.example.gridviewpersonalizado;
 
 public class Ejemplo {
 
-    private  String titulo;
-    private  String subtitulo;
-    private  String urlFoto;
-    private  Integer numeroEjemplo;
+    private String titulo;
+    private String subtitulo;
+    private String urlFoto;
+    private int numero;
+
+    public Ejemplo(String titulo, String subtitulo, String urlFoto, int numero) {
+        this.titulo = titulo;
+        this.subtitulo = subtitulo;
+        this.urlFoto = urlFoto;
+        this.numero = numero;
+    }
 
     public Ejemplo(){
 
     }
-
-    public Ejemplo(String titulo, String subtitulo, String urlFoto, Integer numeroEjemplo) {
-        this.titulo = titulo;
-        this.subtitulo = subtitulo;
-        this.urlFoto = urlFoto;
-        this.numeroEjemplo = numeroEjemplo;
-    }
-
 
     public String getTitulo() {
         return titulo;
@@ -43,11 +42,12 @@ public class Ejemplo {
         this.urlFoto = urlFoto;
     }
 
-    public Integer getNumeroEjemplo() {
-        return numeroEjemplo;
+    public int getNumero() {
+        return numero;
     }
 
-    public void setNumeroEjemplo(Integer numeroEjemplo) {
-        this.numeroEjemplo = numeroEjemplo;
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 }
+
