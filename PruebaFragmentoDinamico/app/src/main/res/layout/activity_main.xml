@@ -8,30 +8,35 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnRojo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Rojo"/>
-    <Button
-        android:id="@+id/btnVerde"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="RVerde"/>
+            android:onClick="onClick"
+            android:text="Rojo" />
+
+        <Button
+            android:id="@+id/btnVerde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="Verde" />
+
+
+    </LinearLayout>
 
     <FrameLayout
-        android:id="@+id/contenedeorFragmentos"
+        android:id="@+id/contenedorFragmentos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+
+    </FrameLayout>
 </LinearLayout>
-
-
-
-
