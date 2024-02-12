@@ -27,7 +27,7 @@
                     android:id="@+id/fragmentVerde"
                     android:icon="@drawable/ic_menu_share_2"
                     android:title="Compartir"
-                    />
+                />
             </menu>
         </item>
         <item android:title="Other">
