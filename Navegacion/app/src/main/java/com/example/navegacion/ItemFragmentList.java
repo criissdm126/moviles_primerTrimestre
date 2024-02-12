@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.example.navegacion.placeholder.PlaceholderContent;
 
+import java.util.List;
 
 
 /**
@@ -66,6 +67,7 @@ public class ItemFragmentList extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
+            List<PlaceholderContent.PlaceholderItem> mValues = null;
             recyclerView.setAdapter(new MyItemRecyclerViewAdapter(PlaceholderContent.ITEMS, mValues));
         }
         return view;
